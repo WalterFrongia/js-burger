@@ -8,6 +8,21 @@
 
 document.getElementById("name-burger").innerHTML = "Boolean burger"
 
-const prezzoPaninoBase = 10 
+let prezzoPaninoBase = 10 
+const prezzoIngredienti = 5 
 
-let prezzoIngredienti = 5 
+const btn = document.getElementById("btn-js")
+
+btn.addEventListener("click", function(){ //
+    prezzoPaninoBase = 10
+    let ingredienti = document.getElementsByClassName("my-ingredients")
+    console.log(ingredienti);
+    for( let i = 0; i<ingredienti.length; i++){
+        let ingrediente = ingredienti[i];
+        console.log(ingrediente);
+        if(ingrediente.checked){
+            prezzoPaninoBase += prezzoIngredienti 
+        }
+    }
+    console.log(prezzoPaninoBase);
+}); 
