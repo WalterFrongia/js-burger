@@ -13,16 +13,16 @@ const prezzoIngredienti = 5
 
 const btn = document.getElementById("btn-js")
 
-btn.addEventListener("click", function(){ //
-    prezzoPaninoBase = 10
-    let ingredienti = document.getElementsByClassName("my-ingredients")
-    console.log(ingredienti);
-    for( let i = 0; i<ingredienti.length; i++){
+btn.addEventListener("click", function(){
+    prezzoPaninoBase = 10 //Stabilire un prezzo base
+    let ingredienti = document.getElementsByClassName("my-ingredients") // Variabili per contenere tutte le classi uguali 
+    console.log(ingredienti); //Verifica ingredienti
+    for( let i = 0; i<ingredienti.length; i++){ //For per verificare che sia checked uno o più ingredienti
         let ingrediente = ingredienti[i];
         console.log(ingrediente);
         if(ingrediente.checked){
-            prezzoPaninoBase += prezzoIngredienti 
+            prezzoPaninoBase += prezzoIngredienti
         }
     }
     console.log(prezzoPaninoBase);
-}); 
+});
