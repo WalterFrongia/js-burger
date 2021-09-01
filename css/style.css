@@ -14,4 +14,8 @@ body{
 
 #my-footer-app{
     background-color: rgb(175, 8, 78);
+    position:absolute;
+    bottom:0;
+    right: 0;
+    left:0;
 }
